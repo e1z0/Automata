@@ -1,0 +1,7 @@
+e:\projects\Automata\Automata\bin\Release\Automata.exe
+e:\projects\Automata\Automata\bin\Release\Automata.pdb
+e:\projects\Automata\Automata\obj\x86\Release\Automata.mainform.resources
+e:\projects\Automata\Automata\obj\x86\Release\Automata.Properties.Resources.resources
+e:\projects\Automata\Automata\obj\x86\Release\Automata.csproj.GenerateResource.Cache
+e:\projects\Automata\Automata\obj\x86\Release\Automata.exe
+e:\projects\Automata\Automata\obj\x86\Release\Automata.pdb

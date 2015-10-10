@@ -1,0 +1,8 @@
+E:\projects\Automata\Automata\obj\x86\Debug\Automata.mainform.resources
+E:\projects\Automata\Automata\obj\x86\Debug\Automata.Properties.Resources.resources
+E:\projects\Automata\Automata\obj\x86\Debug\Automata.csproj.GenerateResource.Cache
+E:\projects\Automata\Automata\bin\Debug\Automata.exe
+E:\projects\Automata\Automata\bin\Debug\Automata.pdb
+E:\projects\Automata\Automata\obj\x86\Debug\Automata.exe
+E:\projects\Automata\Automata\obj\x86\Debug\Automata.pdb
+e:\projects\Automata\Automata\obj\x86\Debug\Automata.csprojResolveAssemblyReference.cache
