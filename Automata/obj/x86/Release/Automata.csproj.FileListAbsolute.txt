@@ -5,3 +5,4 @@ e:\projects\Automata\Automata\obj\x86\Release\Automata.Properties.Resources.reso
 e:\projects\Automata\Automata\obj\x86\Release\Automata.csproj.GenerateResource.Cache
 e:\projects\Automata\Automata\obj\x86\Release\Automata.exe
 e:\projects\Automata\Automata\obj\x86\Release\Automata.pdb
+e:\projects\Automata\Automata\obj\x86\Release\Automata.csprojResolveAssemblyReference.cache

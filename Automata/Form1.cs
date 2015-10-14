@@ -478,6 +478,30 @@ namespace Automata
             System.Diagnostics.Process.Start("http://chat.bsdnet.lt/");
         }
 
+        private void button27_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Policies\\Microsoft\\Windows", true);
+            key.CreateSubKey("WindowsUpdate");
+            key = key.OpenSubKey("WindowsUpdate", true);
+            key.CreateSubKey("AU");
+            key = key.OpenSubKey("AU", true);
+            key.SetValue("NoAutoRebootWithLoggedOnUsers", 1);
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Policies\\Microsoft\\Windows", true);
+            key.CreateSubKey("WindowsUpdate");
+            key = key.OpenSubKey("WindowsUpdate", true);
+            key.CreateSubKey("AU");
+            key = key.OpenSubKey("AU", true);
+            key.SetValue("NoAutoRebootWithLoggedOnUsers", 0);
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     
     }
 }
