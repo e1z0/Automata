@@ -486,7 +486,10 @@ namespace Automata
             key.CreateSubKey("AU");
             key = key.OpenSubKey("AU", true);
             key.SetValue("NoAutoRebootWithLoggedOnUsers", 1);
+            key.SetValue("RebootRelaunchTimeout", 0x5a0,RegistryValueKind.DWord);
+            key.SetValue("RebootRelaunchTimeoutEnabled", 1);
             key.Close();
+            System.Diagnostics.Process.Start("sc","stop wuauserv");
             MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -499,6 +502,7 @@ namespace Automata
             key = key.OpenSubKey("AU", true);
             key.SetValue("NoAutoRebootWithLoggedOnUsers", 0);
             key.Close();
+            System.Diagnostics.Process.Start("sc", "start wuauserv");
             MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

@@ -1,2 +1,1 @@
 * change MAC address
-* disable Windows 7 reboot after 4hrs notification
