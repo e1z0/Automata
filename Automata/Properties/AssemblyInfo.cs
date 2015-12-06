@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Automata")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("https://github.com/e1z0/Automata")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Automata")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  2015 e1z0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
