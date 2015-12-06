@@ -60,7 +60,6 @@ namespace Automata
         }
 
 
-
         private void mainform_Load(object sender, EventArgs e)
         {
         
@@ -532,6 +531,51 @@ namespace Automata
             key.SetValue("NoAutoRebootWithLoggedOnUsers", 0);
             key.Close();
             System.Diagnostics.Process.Start("sc", "start wuauserv");
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            if (Is64Bit()) MessageBox.Show("bibela!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+      //some kind of sufleravimas
+
+       // http://programmingtricks9.blogspot.lt/2014/02/how-to-create-own-mac-address-changer.html
+            // http://stackoverflow.com/questions/8753043/how-to-change-mac-address-with-batch-file-on-windows-7
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.Users.OpenSubKey(".DEFAULT\\Control Panel\\Keyboard", true);
+            key.SetValue("InitialKeyboardIndicators", "2147483650");
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.Users.OpenSubKey(".DEFAULT\\Control Panel\\Keyboard", true);
+            key.SetValue("InitialKeyboardIndicators", "2147483648");
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows Defender\\MpEngine", true);
+            key.SetValue("MpEnablePus", 1, RegistryValueKind.DWord);
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows Defender\\MpEngine", true);
+            key.DeleteValue("MpEnablePus");
+            key.Close();
             MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

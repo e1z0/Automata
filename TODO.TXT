@@ -1,1 +1,4 @@
 * change MAC address
+* context menu block with firewall
+* defender mp enable as described here: http://www.techworm.net/2015/11/an-easy-registry-hack-in-windows-defender-makes-it-a-efficient-adware-killer.html
+* Windows 10 numlock on on logon screen fix

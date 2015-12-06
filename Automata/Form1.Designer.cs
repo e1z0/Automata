@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainform));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,6 +81,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
@@ -88,12 +96,17 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -106,9 +119,11 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox11.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -129,6 +144,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox12);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -138,6 +154,45 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Internet";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.button30);
+            this.groupBox12.Controls.Add(this.button29);
+            this.groupBox12.Controls.Add(this.textBox4);
+            this.groupBox12.Location = new System.Drawing.Point(7, 228);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(413, 100);
+            this.groupBox12.TabIndex = 6;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Change MAC Address";
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(9, 54);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 23);
+            this.button30.TabIndex = 2;
+            this.button30.Text = "Read";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button29
+            // 
+            this.button29.Location = new System.Drawing.Point(200, 28);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(75, 23);
+            this.button29.TabIndex = 1;
+            this.button29.Text = "Test :O";
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(9, 28);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(185, 20);
+            this.textBox4.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -619,6 +674,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox14);
+            this.tabPage4.Controls.Add(this.groupBox13);
             this.tabPage4.Controls.Add(this.groupBox11);
             this.tabPage4.Controls.Add(this.groupBox9);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -627,6 +684,47 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Win Customizations";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.button28);
+            this.groupBox11.Controls.Add(this.button27);
+            this.groupBox11.Controls.Add(this.label12);
+            this.groupBox11.Location = new System.Drawing.Point(3, 126);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(330, 64);
+            this.groupBox11.TabIndex = 1;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Windows Update";
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(101, 32);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(75, 23);
+            this.button28.TabIndex = 2;
+            this.button28.Text = "Enable";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(9, 32);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(86, 23);
+            this.button27.TabIndex = 1;
+            this.button27.Text = "Disable";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(301, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "For Windows 7 Users, disable Reboot Notification after update";
             // 
             // groupBox9
             // 
@@ -752,46 +850,87 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // groupBox11
+            // groupBox13
             // 
-            this.groupBox11.Controls.Add(this.button28);
-            this.groupBox11.Controls.Add(this.button27);
-            this.groupBox11.Controls.Add(this.label12);
-            this.groupBox11.Location = new System.Drawing.Point(3, 126);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(330, 100);
-            this.groupBox11.TabIndex = 1;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Windows Update";
+            this.groupBox13.Controls.Add(this.button32);
+            this.groupBox13.Controls.Add(this.button31);
+            this.groupBox13.Controls.Add(this.label13);
+            this.groupBox13.Location = new System.Drawing.Point(3, 196);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(330, 64);
+            this.groupBox13.TabIndex = 2;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Windows 8/10 Numlock on";
             // 
-            // label12
+            // label13
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(301, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "For Windows 7 Users, disable Reboot Notification after update";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(247, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Turn numlock on at Logon screen (Win8,8.1,10) fix";
             // 
-            // button27
+            // button31
             // 
-            this.button27.Location = new System.Drawing.Point(9, 32);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(86, 23);
-            this.button27.TabIndex = 1;
-            this.button27.Text = "Disable";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
+            this.button31.Location = new System.Drawing.Point(9, 32);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(86, 23);
+            this.button31.TabIndex = 1;
+            this.button31.Text = "On";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
-            // button28
+            // button32
             // 
-            this.button28.Location = new System.Drawing.Point(101, 32);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 23);
-            this.button28.TabIndex = 2;
-            this.button28.Text = "Enable";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
+            this.button32.Location = new System.Drawing.Point(101, 32);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(75, 23);
+            this.button32.TabIndex = 2;
+            this.button32.Text = "Off";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.button34);
+            this.groupBox14.Controls.Add(this.button33);
+            this.groupBox14.Controls.Add(this.label14);
+            this.groupBox14.Location = new System.Drawing.Point(233, 3);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(314, 117);
+            this.groupBox14.TabIndex = 3;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Windows 10 Super Antispyware";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(262, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Windows 10 Super Antispyware in Windows Defender";
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(9, 30);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 1;
+            this.button33.Text = "Turn on";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(138, 30);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 2;
+            this.button34.Text = "Turn off";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // mainform
             // 
@@ -806,6 +945,8 @@
             this.Load += new System.EventHandler(this.mainform_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -824,12 +965,16 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -899,6 +1044,18 @@
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Label label14;
 
     }
 }

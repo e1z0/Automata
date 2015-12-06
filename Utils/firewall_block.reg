@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+ 
+[HKEY_CLASSES_ROOT\exefile\shell]
+ 
+[HKEY_CLASSES_ROOT\exefile\shell\Add To Firewall]
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+ 
+[HKEY_CLASSES_ROOT\exefile\shell\Add To Firewall\command]
+@="netsh advfirewall firewall add rule name=\"%1\" dir=out action=block program=\"%1\""
+ 
+[HKEY_CLASSES_ROOT\exefile\shell\Delete From Firewall]
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\exefile\shell\Delete From Firewall\command]
+@="netsh advfirewall firewall delete rule name=\"%1\""
