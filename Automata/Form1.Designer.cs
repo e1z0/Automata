@@ -81,6 +81,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.button28 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
@@ -96,14 +104,10 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -119,11 +123,12 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -514,6 +519,7 @@
             // tabPage3
             // 
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage3.Controls.Add(this.groupBox15);
             this.tabPage3.Controls.Add(this.textBox3);
             this.tabPage3.Controls.Add(this.groupBox10);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -685,6 +691,88 @@
             this.tabPage4.Text = "Win Customizations";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.button34);
+            this.groupBox14.Controls.Add(this.button33);
+            this.groupBox14.Controls.Add(this.label14);
+            this.groupBox14.Location = new System.Drawing.Point(233, 3);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(314, 117);
+            this.groupBox14.TabIndex = 3;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Windows 10 Super Antispyware";
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(138, 30);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 2;
+            this.button34.Text = "Turn off";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(9, 30);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 1;
+            this.button33.Text = "Turn on";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(262, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Windows 10 Super Antispyware in Windows Defender";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.button32);
+            this.groupBox13.Controls.Add(this.button31);
+            this.groupBox13.Controls.Add(this.label13);
+            this.groupBox13.Location = new System.Drawing.Point(3, 196);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(330, 64);
+            this.groupBox13.TabIndex = 2;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Windows 8/10 Numlock on";
+            // 
+            // button32
+            // 
+            this.button32.Location = new System.Drawing.Point(101, 32);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(75, 23);
+            this.button32.TabIndex = 2;
+            this.button32.Text = "Off";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(9, 32);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(86, 23);
+            this.button31.TabIndex = 1;
+            this.button31.Text = "On";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(247, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Turn numlock on at Logon screen (Win8,8.1,10) fix";
+            // 
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.button28);
@@ -850,87 +938,46 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // groupBox13
+            // groupBox15
             // 
-            this.groupBox13.Controls.Add(this.button32);
-            this.groupBox13.Controls.Add(this.button31);
-            this.groupBox13.Controls.Add(this.label13);
-            this.groupBox13.Location = new System.Drawing.Point(3, 196);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(330, 64);
-            this.groupBox13.TabIndex = 2;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Windows 8/10 Numlock on";
+            this.groupBox15.Controls.Add(this.button36);
+            this.groupBox15.Controls.Add(this.button35);
+            this.groupBox15.Controls.Add(this.label15);
+            this.groupBox15.Location = new System.Drawing.Point(3, 250);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(289, 64);
+            this.groupBox15.TabIndex = 5;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Block with firewall";
             // 
-            // label13
+            // label15
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(247, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Turn numlock on at Logon screen (Win8,8.1,10) fix";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 45);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(223, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Block with firewall any .exe with context menu";
             // 
-            // button31
+            // button35
             // 
-            this.button31.Location = new System.Drawing.Point(9, 32);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(86, 23);
-            this.button31.TabIndex = 1;
-            this.button31.Text = "On";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button31_Click);
+            this.button35.Location = new System.Drawing.Point(6, 19);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 23);
+            this.button35.TabIndex = 1;
+            this.button35.Text = "Register";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
-            // button32
+            // button36
             // 
-            this.button32.Location = new System.Drawing.Point(101, 32);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 23);
-            this.button32.TabIndex = 2;
-            this.button32.Text = "Off";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.button34);
-            this.groupBox14.Controls.Add(this.button33);
-            this.groupBox14.Controls.Add(this.label14);
-            this.groupBox14.Location = new System.Drawing.Point(233, 3);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(314, 117);
-            this.groupBox14.TabIndex = 3;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Windows 10 Super Antispyware";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(262, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Windows 10 Super Antispyware in Windows Defender";
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(9, 30);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 1;
-            this.button33.Text = "Turn on";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(138, 30);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 23);
-            this.button34.TabIndex = 2;
-            this.button34.Text = "Turn off";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
+            this.button36.Location = new System.Drawing.Point(87, 19);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(75, 23);
+            this.button36.TabIndex = 2;
+            this.button36.Text = "Unregister";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // mainform
             // 
@@ -965,16 +1012,18 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1056,6 +1105,10 @@
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Label label15;
 
     }
 }

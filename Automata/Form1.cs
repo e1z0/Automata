@@ -579,6 +579,37 @@ namespace Automata
             MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void button35_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.ClassesRoot.OpenSubKey("exefile\\shell", true);
+            key.CreateSubKey("Block with Firewall");
+            key = key.OpenSubKey("Block with Firewall", true);
+            key.SetValue("HasLUAShield", "");
+            key.SetValue("NoWorkingDirectory", "");
+            key.CreateSubKey("command");
+            key = key.OpenSubKey("command", true);
+            key.SetValue("", "netsh advfirewall firewall add rule name=\"%1\" dir=out action=block program=\"%1\"");
+            key = Registry.ClassesRoot.OpenSubKey("exefile\\shell", true);
+            key.CreateSubKey("UnBlock with Firewall");
+            key = key.OpenSubKey("UnBlock with Firewall", true);
+            key.SetValue("HasLUAShield", "");
+            key.SetValue("NoWorkingDirectory", "");
+            key.CreateSubKey("command");
+            key = key.OpenSubKey("command", true);
+            key.SetValue("", "netsh advfirewall firewall delete rule name=\"%1\"");
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            RegistryKey key = Registry.ClassesRoot.OpenSubKey("exefile\\shell", true);
+            key.DeleteSubKeyTree("Block with Firewall");
+            key.DeleteSubKeyTree("UnBlock with Firewall");
+            key.Close();
+            MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     
     }
 }
