@@ -536,7 +536,9 @@ namespace Automata
 
         private void button29_Click(object sender, EventArgs e)
         {
-            if (Is64Bit()) MessageBox.Show("bibela!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (Is64Bit()) { MessageBox.Show("64bit!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else {
+                MessageBox.Show("32bit!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
         private void button30_Click(object sender, EventArgs e)

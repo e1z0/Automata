@@ -6,3 +6,8 @@ e:\projects\Automata\Automata\obj\x86\Release\Automata.csproj.GenerateResource.C
 e:\projects\Automata\Automata\obj\x86\Release\Automata.exe
 e:\projects\Automata\Automata\obj\x86\Release\Automata.pdb
 e:\projects\Automata\Automata\obj\x86\Release\Automata.csprojResolveAssemblyReference.cache
+e:\projects\Automata\Automata\bin\Release\Automata.exe.manifest
+e:\projects\Automata\Automata\bin\Release\Automata.application
+e:\projects\Automata\Automata\obj\x86\Release\Automata.TrustInfo.xml
+e:\projects\Automata\Automata\obj\x86\Release\Automata.exe.manifest
+e:\projects\Automata\Automata\obj\x86\Release\Automata.application
