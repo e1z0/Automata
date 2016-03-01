@@ -108,6 +108,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -162,6 +163,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.comboBox3);
             this.groupBox12.Controls.Add(this.button30);
             this.groupBox12.Controls.Add(this.button29);
             this.groupBox12.Controls.Add(this.textBox4);
@@ -174,7 +176,7 @@
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(9, 54);
+            this.button30.Location = new System.Drawing.Point(5, 71);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(75, 23);
             this.button30.TabIndex = 2;
@@ -184,7 +186,7 @@
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(200, 28);
+            this.button29.Location = new System.Drawing.Point(277, 49);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(75, 23);
             this.button29.TabIndex = 1;
@@ -194,7 +196,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 28);
+            this.textBox4.Location = new System.Drawing.Point(3, 49);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(185, 20);
             this.textBox4.TabIndex = 0;
@@ -979,6 +981,14 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(9, 19);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(248, 21);
+            this.comboBox3.TabIndex = 3;
+            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1110,6 +1120,7 @@
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox3;
 
     }
 }

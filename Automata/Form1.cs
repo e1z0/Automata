@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Microsoft.VisualBasic;
 using System.Runtime.InteropServices;
 
+
 namespace Automata
 {
 
@@ -26,7 +27,6 @@ namespace Automata
         public const string version = "v0.1";
         public string tempdir = System.IO.Path.GetTempPath();
         string system32Directory = Path.Combine(Environment.ExpandEnvironmentVariables("%windir%"), "system32");
-
 
         private static FileAttributes RemoveAttribute(FileAttributes attributes, FileAttributes attributesToRemove)
         {
@@ -536,9 +536,40 @@ namespace Automata
 
         private void button29_Click(object sender, EventArgs e)
         {
-            if (Is64Bit()) { MessageBox.Show("64bit!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-            else {
-                MessageBox.Show("32bit!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            Dictionary comboSource = new Dictionary();
+            // atidarom resursa kur yra tinklo kortos
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}", true);
+            foreach (var v in key.GetSubKeyNames())
+            {
+                RegistryKey adapteris = key.OpenSubKey(v);
+                comboBox3.DisplayMember = "Value"; // uztaginam slapta combobox itema
+                if (adapteris != null)
+                {
+                   // foreach (var value in adapteris.GetValueNames())
+                   // {
+                        string keyValue = Convert.ToString(adapteris.GetValue("DriverDesc"));
+                        if (keyValue != "")
+                        {
+                            comboBox3.Items.Add(new KeyValuePair(key.Name, keyValue)); // examplas new KeyValuePair("2", "This text is displayed")
+                        }
+                        //Console.WriteLine("\tValue:" + value);
+
+                        // Check for the publisher to ensure it's our product
+                        //string keyValue = Convert.ToString(adapteris.GetValue("Publisher"));
+                        //if (!keyValue.Equals("MyPublisherCompanyName", StringComparison.OrdinalIgnoreCase))
+                         //   continue;
+
+                        //string productName = Convert.ToString(adapteris.GetValue("DisplayName"));
+                        //if (!productName.Equals("MyProductName", StringComparison.OrdinalIgnoreCase))
+                        //    return;
+
+                       // string uninstallPath = Convert.ToString(adapteris.GetValue("InstallSource"));
+
+                        // Do something with this valuable information
+                    //}
+                }
+            }
+
         }
 
         private void button30_Click(object sender, EventArgs e)
