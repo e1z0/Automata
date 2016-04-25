@@ -11,6 +11,7 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using Microsoft.VisualBasic;
 using System.Runtime.InteropServices;
+using System.Security.Principal;
 
 
 namespace Automata
@@ -24,7 +25,7 @@ namespace Automata
         {
             InitializeComponent();
         }
-        public const string version = "v0.1";
+        public const string version = "v0.2";
         public string tempdir = System.IO.Path.GetTempPath();
         string system32Directory = Path.Combine(Environment.ExpandEnvironmentVariables("%windir%"), "system32");
 
@@ -37,6 +38,7 @@ namespace Automata
         [DllImport("kernel32.dll", SetLastError = true, CallingConvention = CallingConvention.Winapi)]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool IsWow64Process([In] IntPtr hProcess, [Out] out bool lpSystemInfo);
+        
 
         private bool Is64Bit()
         {
@@ -62,13 +64,51 @@ namespace Automata
 
         private void mainform_Load(object sender, EventArgs e)
         {
-        
+            try
+            {
+                bool isElevated;
+                WindowsIdentity identity = WindowsIdentity.GetCurrent();
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                isElevated = principal.IsInRole(WindowsBuiltInRole.Administrator);
+                if (isElevated == false)
+                {
+                MessageBox.Show("Run program with Administrator rights","Administrator rights required",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                System.Windows.Forms.Application.Exit();
+            }
+
             RegistryKey key = Registry.CurrentUser.OpenSubKey("Control Panel\\Desktop\\WindowMetrics", false);
             comboBox1.Text = (string)key.GetValue("Shell Icon Size");
             comboBox2.Text = (string)key.GetValue("Shell Icon BPP");
             key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",false);
             this.Text = "Automata " + version + " running on: " + key.GetValue("ProductName") + " " + key.GetValue("BuildLab");
             key.Close();
+            
+                // atidarom resursa kur yra tinklo kortos
+                // sudedam i combobox3 viska
+                RegistryKey key2 = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}", true);
+                foreach (var v in key2.GetSubKeyNames())
+                {
+                    RegistryKey adapteris = key2.OpenSubKey(v);
+                    if (adapteris != null)
+                    {
+                        string keyValue = Convert.ToString(adapteris.GetValue("DriverDesc"));
+                        if (keyValue != "")
+                        {
+                            ComboboxItem item = new ComboboxItem();
+                            item.Text = keyValue;
+                            string output = adapteris.Name.Substring(adapteris.Name.IndexOf('\\') + 1);
+                            item.Value = output;
+                            comboBox3.Items.Add(item);
+                        }
+                    }
+                }
+                key2.Close();
+            }
+            catch (Exception)
+            {
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -534,50 +574,40 @@ namespace Automata
             MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public class ComboboxItem
+        {
+            public string Text { get; set; }
+            public object Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+
+
         private void button29_Click(object sender, EventArgs e)
         {
-            Dictionary comboSource = new Dictionary();
-            // atidarom resursa kur yra tinklo kortos
-            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}", true);
-            foreach (var v in key.GetSubKeyNames())
+            try
             {
-                RegistryKey adapteris = key.OpenSubKey(v);
-                comboBox3.DisplayMember = "Value"; // uztaginam slapta combobox itema
-                if (adapteris != null)
-                {
-                   // foreach (var value in adapteris.GetValueNames())
-                   // {
-                        string keyValue = Convert.ToString(adapteris.GetValue("DriverDesc"));
-                        if (keyValue != "")
-                        {
-                            comboBox3.Items.Add(new KeyValuePair(key.Name, keyValue)); // examplas new KeyValuePair("2", "This text is displayed")
-                        }
-                        //Console.WriteLine("\tValue:" + value);
-
-                        // Check for the publisher to ensure it's our product
-                        //string keyValue = Convert.ToString(adapteris.GetValue("Publisher"));
-                        //if (!keyValue.Equals("MyPublisherCompanyName", StringComparison.OrdinalIgnoreCase))
-                         //   continue;
-
-                        //string productName = Convert.ToString(adapteris.GetValue("DisplayName"));
-                        //if (!productName.Equals("MyProductName", StringComparison.OrdinalIgnoreCase))
-                        //    return;
-
-                       // string uninstallPath = Convert.ToString(adapteris.GetValue("InstallSource"));
-
-                        // Do something with this valuable information
-                    //}
-                }
+                string address = ((comboBox3.SelectedItem as ComboboxItem).Value.ToString());
+                RegistryKey rkey;
+                string MAC;
+                MAC = textBox4.Text;
+                rkey = Registry.LocalMachine.OpenSubKey(@address, true);
+                rkey.SetValue("NetworkAddress", MAC,RegistryValueKind.String);
+                rkey.Close();
+                MessageBox.Show("Reboot machine or disable/enable network device", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+            }catch (Exception)
+            {
             }
 
         }
+        
 
         private void button30_Click(object sender, EventArgs e)
         {
-      //some kind of sufleravimas
-
-       // http://programmingtricks9.blogspot.lt/2014/02/how-to-create-own-mac-address-changer.html
-            // http://stackoverflow.com/questions/8753043/how-to-change-mac-address-with-batch-file-on-windows-7
         }
 
         private void button31_Click(object sender, EventArgs e)
@@ -641,6 +671,23 @@ namespace Automata
             key.DeleteSubKeyTree("UnBlock with Firewall");
             key.Close();
             MessageBox.Show("Operation OK!", "Automata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox4.Text = "";
+                string address = ((comboBox3.SelectedItem as ComboboxItem).Value.ToString());
+                RegistryKey rkey;
+                string MAC;
+                rkey = Registry.LocalMachine.OpenSubKey(@address, true);
+                MAC = rkey.GetValue("NetworkAddress").ToString();
+                textBox4.Text = MAC;
+                rkey.Close();
+            }
+            catch (Exception)
+            { }
         }
 
     

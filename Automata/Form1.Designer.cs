@@ -32,7 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.button30 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button29 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -108,7 +108,8 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -163,8 +164,9 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.label17);
+            this.groupBox12.Controls.Add(this.label16);
             this.groupBox12.Controls.Add(this.comboBox3);
-            this.groupBox12.Controls.Add(this.button30);
             this.groupBox12.Controls.Add(this.button29);
             this.groupBox12.Controls.Add(this.textBox4);
             this.groupBox12.Location = new System.Drawing.Point(7, 228);
@@ -174,31 +176,31 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Change MAC Address";
             // 
-            // button30
+            // comboBox3
             // 
-            this.button30.Location = new System.Drawing.Point(5, 71);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 23);
-            this.button30.TabIndex = 2;
-            this.button30.Text = "Read";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(9, 19);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(248, 21);
+            this.comboBox3.TabIndex = 3;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(277, 49);
+            this.button29.Location = new System.Drawing.Point(218, 44);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 23);
+            this.button29.Size = new System.Drawing.Size(39, 23);
             this.button29.TabIndex = 1;
-            this.button29.Text = "Test :O";
+            this.button29.Text = "Set";
             this.button29.UseVisualStyleBackColor = true;
             this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(3, 49);
+            this.textBox4.Location = new System.Drawing.Point(42, 46);
+            this.textBox4.MaxLength = 12;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 20);
+            this.textBox4.Size = new System.Drawing.Size(169, 20);
             this.textBox4.TabIndex = 0;
             // 
             // groupBox5
@@ -981,13 +983,24 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // comboBox3
+            // label16
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(9, 19);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(248, 21);
-            this.comboBox3.TabIndex = 3;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 48);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Mac:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.label17.Location = new System.Drawing.Point(8, 74);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(156, 15);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Format: 001020304050";
             // 
             // mainform
             // 
@@ -1107,7 +1120,6 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button30;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button31;
@@ -1121,6 +1133,8 @@
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
 
     }
 }

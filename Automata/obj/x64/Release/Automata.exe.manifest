@@ -41,14 +41,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Automata.exe" size="253952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Automata.exe" size="255488">
       <assemblyIdentity name="Automata" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RY0tAMwGcIYQpZhYt5Z9oHOMg8I=</dsig:DigestValue>
+        <dsig:DigestValue>i90tMq9HYEGdCi/dxhJCc/l7jEA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
