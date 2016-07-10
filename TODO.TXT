@@ -1,2 +1,2 @@
-* change MAC address
-http://fossbytes.com/create-bootable-usb-without-software-windows-10-using-command-prompt/
+* http://fossbytes.com/create-bootable-usb-without-software-windows-10-using-command-prompt/
+* more robust integration in windows 10

@@ -4,14 +4,14 @@
   <description asmv2:publisher="Automata" asmv2:product="Automata" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Automata.exe.manifest" size="4679">
+    <dependentAssembly dependencyType="install" codebase="Automata.exe.manifest" size="4014">
       <assemblyIdentity name="Automata.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KajsZkQLlu7xqlb2lGktdlv8ORI=</dsig:DigestValue>
+        <dsig:DigestValue>Uam3fFk2OwfsJRIKLAdbxSL+BQ4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
