@@ -6,8 +6,16 @@ The application is under development but current functions properly! We add visu
 
 **NOTE! For Windows 10 Users** Please run this app in administrator mode to work properly!
 
+**DOWNLOAD**
+
+* [Windows x64](https://github.com/e1z0/Automata/raw/master/Automata/bin/x64/Release/Automata.exe)
+* [Windows x86](https://github.com/e1z0/Automata/raw/master/Automata/bin/Release/Automata.exe)
+
+
 Here are few app screenshots:
 
-https://raw.githubusercontent.com/e1z0/Automata/master/pics/automata_3.png
-https://raw.githubusercontent.com/e1z0/Automata/master/pics/automata_4.png
-https://raw.githubusercontent.com/e1z0/Automata/master/pics/automata_5.png
+![alt text](https://raw.githubusercontent.com/e1z0/Automata/master/pics/automata_3.png "Screen 1")
+
+![alt text](https://raw.githubusercontent.com/e1z0/Automata/master/pics/automata_4.png "Screen 2")
+
+![alt text](https://raw.githubusercontent.com/e1z0/Automata/master/pics/automata_5.png "Screen 3")
