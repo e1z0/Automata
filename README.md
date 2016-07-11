@@ -1,8 +1,8 @@
-**Automate** is the Simple Easy to use Management Tool for Microsoft Windows
+**Automata** is a Simple, Easy to use Management Tool for Microsoft Windows
 
-You can do various simple tasks with it, for example flush dns entries, enable guest smb sharing, change network card mac address, edit hosts file, clean temp & internet storage, cleanup update backups, scan system files, check system health, disable uac and many more...
+You can do various tasks with it, for example flush dns entries, enable guest smb sharing, change network card mac address, edit hosts file, clean temp & internet storage, cleanup update backups, scan system files, check system health, disable uac and many more...
 
-The application is under development but current functions properly! We add visual functions when we test it and everything works fine.
+The application is under constant development however it functions properly!
 
 **NOTE! For Windows 10 Users** Please run this app in administrator mode to work properly!
 
